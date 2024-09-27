@@ -1,70 +1,70 @@
--- 1. Два запроса Exists
--- Выбрать всех посетителей Аэробики
+-- 1. Р”РІР° Р·Р°РїСЂРѕСЃР° Exists
+-- Р’С‹Р±СЂР°С‚СЊ РІСЃРµС… РїРѕСЃРµС‚РёС‚РµР»РµР№ РђСЌСЂРѕР±РёРєРё
 SELECT FirstName, LastName FROM Visiters
 WHERE EXISTS (SELECT * FROM VisitTable
 	WHERE Visiters.id = VisitTable.id AND VisitTable.SectionId = 1);
 
--- Выбрать всех инструкторов, которые НЕ преподают Аэробику, Шейпинг и Кроссфит
+-- Р’С‹Р±СЂР°С‚СЊ РІСЃРµС… РёРЅСЃС‚СЂСѓРєС‚РѕСЂРѕРІ, РєРѕС‚РѕСЂС‹Рµ РќР• РїСЂРµРїРѕРґР°СЋС‚ РђСЌСЂРѕР±РёРєСѓ, РЁРµР№РїРёРЅРі Рё РљСЂРѕСЃСЃС„РёС‚
 SELECT FirstName, LastName FROM Instructors
 WHERE NOT EXISTS (SELECT * FROM Sections
 	WHERE Instructors.SectionId = Sections.id 
-	AND Sections.SectionName IN ('Аэробика', 'Шейпинг', 'Кроссфит'));
+	AND Sections.SectionName IN ('РђСЌСЂРѕР±РёРєР°', 'РЁРµР№РїРёРЅРі', 'РљСЂРѕСЃСЃС„РёС‚'));
 
--- 2. По одному запросу на ANY/SOME (разных а не просто заменить ANY на SOME)
--- Выбрать всех посетителей, которые пришли в клуб в 2022 году
+-- 2. РџРѕ РѕРґРЅРѕРјСѓ Р·Р°РїСЂРѕСЃСѓ РЅР° ANY/SOME (СЂР°Р·РЅС‹С… Р° РЅРµ РїСЂРѕСЃС‚Рѕ Р·Р°РјРµРЅРёС‚СЊ ANY РЅР° SOME)
+-- Р’С‹Р±СЂР°С‚СЊ РІСЃРµС… РїРѕСЃРµС‚РёС‚РµР»РµР№, РєРѕС‚РѕСЂС‹Рµ РїСЂРёС€Р»Рё РІ РєР»СѓР± РІ 2022 РіРѕРґСѓ
 SELECT FirstName, LastName FROM Visiters
 WHERE id = ANY(SELECT id FROM VisitTable
 	WHERE YEAR(FirstVisit) = 2022);
 
--- Какие преподователи заняты в 10:00?
+-- РљР°РєРёРµ РїСЂРµРїРѕРґРѕРІР°С‚РµР»Рё Р·Р°РЅСЏС‚С‹ РІ 10:00?
 SELECT FirstName, LastName FROM Instructors
 WHERE SectionId = (SELECT id FROM Sections 
 	WHERE id = SOME(SELECT SectionId FROM VisitTable		
 		WHERE '10:00:00' BETWEEN StartPair AND EndPair));
 
--- 3. Один запрос ALL
--- Вывести всех посетителей с длиной имени меньше средней по больнице. Ничего умнее не придумал =(
+-- 3. РћРґРёРЅ Р·Р°РїСЂРѕСЃ ALL
+-- Р’С‹РІРµСЃС‚Рё РІСЃРµС… РїРѕСЃРµС‚РёС‚РµР»РµР№ СЃ РґР»РёРЅРѕР№ РёРјРµРЅРё РјРµРЅСЊС€Рµ СЃСЂРµРґРЅРµР№ РїРѕ Р±РѕР»СЊРЅРёС†Рµ. РќРёС‡РµРіРѕ СѓРјРЅРµРµ РЅРµ РїСЂРёРґСѓРјР°Р» =(
 SELECT FirstName, LastName FROM Visiters
 WHERE Len(FirstName) < ALL (SELECT AVG(LEN(FirstName)) FROM Visiters); 
 
--- 4. Один запрос на сочетание ANY/SOME, ALL
--- Вывести всех посетителей с длиной фамилии больше средней, но не с самыми длинными именами (понимаю, что чушь=))
+-- 4. РћРґРёРЅ Р·Р°РїСЂРѕСЃ РЅР° СЃРѕС‡РµС‚Р°РЅРёРµ ANY/SOME, ALL
+-- Р’С‹РІРµСЃС‚Рё РІСЃРµС… РїРѕСЃРµС‚РёС‚РµР»РµР№ СЃ РґР»РёРЅРѕР№ С„Р°РјРёР»РёРё Р±РѕР»СЊС€Рµ СЃСЂРµРґРЅРµР№, РЅРѕ РЅРµ СЃ СЃР°РјС‹РјРё РґР»РёРЅРЅС‹РјРё РёРјРµРЅР°РјРё (РїРѕРЅРёРјР°СЋ, С‡С‚Рѕ С‡СѓС€СЊ=))
 SELECT FirstName, LastName FROM Visiters, VisitTable
 WHERE Visiters.VisitId = VisitTable.id AND Len(LastName) > ALL(SELECT AVG(LEN(LastName)) FROM Visiters)
 	AND LEN(FirstName) < ANY(SELECT LEN(FirstName) FROM Visiters);
 
--- 5. Один запрос на UNION
--- Вывести уникальные имена всех инструкторов и посетителей
+-- 5. РћРґРёРЅ Р·Р°РїСЂРѕСЃ РЅР° UNION
+-- Р’С‹РІРµСЃС‚Рё СѓРЅРёРєР°Р»СЊРЅС‹Рµ РёРјРµРЅР° РІСЃРµС… РёРЅСЃС‚СЂСѓРєС‚РѕСЂРѕРІ Рё РїРѕСЃРµС‚РёС‚РµР»РµР№
 SELECT FirstName FROM Visiters
 UNION
 SELECT FirstName FROM Instructors;
 
--- 6. Один запрос на UNION ALL
--- Вывести id, имена всех инстукторов и посетителей с пометкой кто это и отсортированных по имени.
+-- 6. РћРґРёРЅ Р·Р°РїСЂРѕСЃ РЅР° UNION ALL
+-- Р’С‹РІРµСЃС‚Рё id, РёРјРµРЅР° РІСЃРµС… РёРЅСЃС‚СѓРєС‚РѕСЂРѕРІ Рё РїРѕСЃРµС‚РёС‚РµР»РµР№ СЃ РїРѕРјРµС‚РєРѕР№ РєС‚Рѕ СЌС‚Рѕ Рё РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹С… РїРѕ РёРјРµРЅРё.
 SELECT id, FirstName, 'Visiter' AS 'Who is this' FROM Visiters
 UNION ALL
 SELECT id, FirstName, 'Instructor' AS 'Who is this' FROM Instructors
 ORDER BY FirstName;
 
--- 7. По одному запросу на все JOIN(INNER/LEFT/RIGHT/LEFT+RIGHT/FULL) - всего пять штук
--- INNER JOIN. Выести инфу об инструкторах преподающих Пилатес и Бодифлекс
+-- 7. РџРѕ РѕРґРЅРѕРјСѓ Р·Р°РїСЂРѕСЃСѓ РЅР° РІСЃРµ JOIN(INNER/LEFT/RIGHT/LEFT+RIGHT/FULL) - РІСЃРµРіРѕ РїСЏС‚СЊ С€С‚СѓРє
+-- INNER JOIN. Р’С‹РµСЃС‚Рё РёРЅС„Сѓ РѕР± РёРЅСЃС‚СЂСѓРєС‚РѕСЂР°С… РїСЂРµРїРѕРґР°СЋС‰РёС… РџРёР»Р°С‚РµСЃ Рё Р‘РѕРґРёС„Р»РµРєСЃ
 SELECT LastName + ' ' + FirstName AS FullName, Phone FROM Instructors
 INNER JOIN Sections ON Instructors.SectionId = Sections.id
-WHERE SectionName IN ('Пилатес', 'Бодифлекс')
+WHERE SectionName IN ('РџРёР»Р°С‚РµСЃ', 'Р‘РѕРґРёС„Р»РµРєСЃ')
 
--- LEFT JOIN. Вывести всех визитеров и их последний визит даже если ещё не начали ходить
+-- LEFT JOIN. Р’С‹РІРµСЃС‚Рё РІСЃРµС… РІРёР·РёС‚РµСЂРѕРІ Рё РёС… РїРѕСЃР»РµРґРЅРёР№ РІРёР·РёС‚ РґР°Р¶Рµ РµСЃР»Рё РµС‰С‘ РЅРµ РЅР°С‡Р°Р»Рё С…РѕРґРёС‚СЊ
 SELECT FirstName, LastName, VisitTable.LastVisit FROM Visiters
 LEFT JOIN VisitTable ON Visiters.VisitId = VisitTable.id;
 
--- RIGHT JOIN. Вывести инструкторов и все секции, даже если у некоторых секций нет инструкторов
+-- RIGHT JOIN. Р’С‹РІРµСЃС‚Рё РёРЅСЃС‚СЂСѓРєС‚РѕСЂРѕРІ Рё РІСЃРµ СЃРµРєС†РёРё, РґР°Р¶Рµ РµСЃР»Рё Сѓ РЅРµРєРѕС‚РѕСЂС‹С… СЃРµРєС†РёР№ РЅРµС‚ РёРЅСЃС‚СЂСѓРєС‚РѕСЂРѕРІ
 SELECT LastName, FirstName, Sections.SectionName FROM Instructors
 RiGHT JOIN Sections ON Instructors.SectionId = Sections.id
 
--- FULL JOIN. Вывести инструкторов и все секции, даже если у кого-то нет "пары"
+-- FULL JOIN. Р’С‹РІРµСЃС‚Рё РёРЅСЃС‚СЂСѓРєС‚РѕСЂРѕРІ Рё РІСЃРµ СЃРµРєС†РёРё, РґР°Р¶Рµ РµСЃР»Рё Сѓ РєРѕРіРѕ-С‚Рѕ РЅРµС‚ "РїР°СЂС‹"
 SELECT LastName, FirstName, Sections.SectionName FROM Instructors
 FULL JOIN Sections ON Instructors.SectionId = Sections.id
 
--- LEFT + RIGHT JOIN. Вывести все секции и инстукторов которые там работают и всех посетителей и их секции
+-- LEFT + RIGHT JOIN. Р’С‹РІРµСЃС‚Рё РІСЃРµ СЃРµРєС†РёРё Рё РёРЅСЃС‚СѓРєС‚РѕСЂРѕРІ РєРѕС‚РѕСЂС‹Рµ С‚Р°Рј СЂР°Р±РѕС‚Р°СЋС‚ Рё РІСЃРµС… РїРѕСЃРµС‚РёС‚РµР»РµР№ Рё РёС… СЃРµРєС†РёРё
 SELECT LastName, FirstName, Sections.SectionName  FROM Instructors
 RIGHT JOIN Sections ON Instructors.SectionId = Sections.id
 UNION ALL
