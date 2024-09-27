@@ -63,3 +63,11 @@ RiGHT JOIN Sections ON Instructors.SectionId = Sections.id
 -- FULL JOIN. Вывести инструкторов и все секции, даже если у кого-то нет "пары"
 SELECT LastName, FirstName, Sections.SectionName FROM Instructors
 FULL JOIN Sections ON Instructors.SectionId = Sections.id
+
+-- LEFT + RIGHT JOIN. Вывести все секции и инстукторов которые там работают и всех посетителей и их секции
+SELECT LastName, FirstName, Sections.SectionName  FROM Instructors
+RIGHT JOIN Sections ON Instructors.SectionId = Sections.id
+UNION ALL
+SELECT FirstName, LastName,  Sections.SectionName FROM Visiters, VisitTable
+LEFT JOIN Sections ON VisitTable.SectionId = Sections.id
+WHERE Visiters.VisitId = VisitTable.id
