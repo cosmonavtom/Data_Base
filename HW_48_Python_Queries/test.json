@@ -1,0 +1,657 @@
+[
+    {
+        "FirstName": "Борис",
+        "LastName": "Абрамович"
+    },
+    {
+        "FirstName": "Геннадий",
+        "LastName": "Вертинский"
+    },
+    {
+        "FirstName": "Иннокентий",
+        "LastName": "Смактуновский"
+    },
+    {
+        "FirstName": "Валентин ",
+        "LastName": "Усташевич"
+    }
+][
+    {
+        "FirstName": "Фёдор",
+        "LastName": "Галустян"
+    },
+    {
+        "FirstName": "Денис",
+        "LastName": "Иванов"
+    },
+    {
+        "FirstName": "Эльдар",
+        "LastName": "Крутиков"
+    },
+    {
+        "FirstName": "Амир",
+        "LastName": "Челнаков "
+    },
+    {
+        "FirstName": "Александр",
+        "LastName": "Борисов"
+    },
+    {
+        "FirstName": "Фриман",
+        "LastName": "Норман"
+    }
+][
+    {
+        "FirstName": "Лидия",
+        "LastName": "Небросько"
+    },
+    {
+        "FirstName": "Тамара",
+        "LastName": "Меладзе"
+    }
+][
+    {
+        "FirstName": "Ирина",
+        "LastName": "Ялдышева"
+    },
+    {
+        "FirstName": "Пётр",
+        "LastName": "Захаров "
+    }
+][
+    {
+        "FirstName": "Борис",
+        "LastName": "Абрамович"
+    },
+    {
+        "FirstName": "Олег",
+        "LastName": "Боярышников"
+    },
+    {
+        "FirstName": "Ольга",
+        "LastName": "Филатова"
+    },
+    {
+        "FirstName": "Ольга ",
+        "LastName": "Тиханович"
+    },
+    {
+        "FirstName": "Ирина",
+        "LastName": "Понарошку"
+    },
+    {
+        "FirstName": "Борис",
+        "LastName": "Крыжовников"
+    },
+    {
+        "FirstName": "Лидия",
+        "LastName": "Небросько"
+    },
+    {
+        "FirstName": "Петр",
+        "LastName": "Доронов"
+    }
+][
+    {
+        "FirstName": "Борис",
+        "LastName": "Абрамович"
+    },
+    {
+        "FirstName": "Геннадий",
+        "LastName": "Вертинский"
+    },
+    {
+        "FirstName": "Олег",
+        "LastName": "Боярышников"
+    },
+    {
+        "FirstName": "Ольга ",
+        "LastName": "Тиханович"
+    },
+    {
+        "FirstName": "Ирина",
+        "LastName": "Понарошку"
+    },
+    {
+        "FirstName": "Борис",
+        "LastName": "Крыжовников"
+    },
+    {
+        "FirstName": "Аристарх",
+        "LastName": "Коклюшкин"
+    },
+    {
+        "FirstName": "Лидия",
+        "LastName": "Небросько"
+    },
+    {
+        "FirstName": "Валентин ",
+        "LastName": "Усташевич"
+    }
+][
+    {
+        "FirstName": "Александр"
+    },
+    {
+        "FirstName": "Алексей"
+    },
+    {
+        "FirstName": "Амир"
+    },
+    {
+        "FirstName": "Аристарх"
+    },
+    {
+        "FirstName": "Борис"
+    },
+    {
+        "FirstName": "Валентин "
+    },
+    {
+        "FirstName": "Геннадий"
+    },
+    {
+        "FirstName": "Денис"
+    },
+    {
+        "FirstName": "Иннокентий"
+    },
+    {
+        "FirstName": "Ирина"
+    },
+    {
+        "FirstName": "Лидия"
+    },
+    {
+        "FirstName": "Максим"
+    },
+    {
+        "FirstName": "Николай"
+    },
+    {
+        "FirstName": "Олег"
+    },
+    {
+        "FirstName": "Ольга"
+    },
+    {
+        "FirstName": "Петр"
+    },
+    {
+        "FirstName": "Пётр"
+    },
+    {
+        "FirstName": "Себестьян"
+    },
+    {
+        "FirstName": "Сергей"
+    },
+    {
+        "FirstName": "Тамара"
+    },
+    {
+        "FirstName": "Фёдор"
+    },
+    {
+        "FirstName": "Фриман"
+    },
+    {
+        "FirstName": "Эльдар"
+    }
+][
+    {
+        "id": 10,
+        "FirstName": "Александр",
+        "Who is this": "Instructor"
+    },
+    {
+        "id": 17,
+        "FirstName": "Алексей",
+        "Who is this": "Visiter"
+    },
+    {
+        "id": 8,
+        "FirstName": "Амир",
+        "Who is this": "Instructor"
+    },
+    {
+        "id": 20,
+        "FirstName": "Аристарх",
+        "Who is this": "Visiter"
+    },
+    {
+        "id": 12,
+        "FirstName": "Аристарх",
+        "Who is this": "Visiter"
+    },
+    {
+        "id": 11,
+        "FirstName": "Борис",
+        "Who is this": "Visiter"
+    },
+    {
+        "id": 1,
+        "FirstName": "Борис",
+        "Who is this": "Visiter"
+    },
+    {
+        "id": 19,
+        "FirstName": "Валентин ",
+        "Who is this": "Visiter"
+    },
+    {
+        "id": 2,
+        "FirstName": "Геннадий",
+        "Who is this": "Visiter"
+    },
+    {
+        "id": 4,
+        "FirstName": "Геннадий",
+        "Who is this": "Visiter"
+    },
+    {
+        "id": 4,
+        "FirstName": "Денис",
+        "Who is this": "Instructor"
+    },
+    {
+        "id": 3,
+        "FirstName": "Иннокентий",
+        "Who is this": "Visiter"
+    },
+    {
+        "id": 9,
+        "FirstName": "Ирина",
+        "Who is this": "Visiter"
+    },
+    {
+        "id": 5,
+        "FirstName": "Ирина",
+        "Who is this": "Instructor"
+    },
+    {
+        "id": 3,
+        "FirstName": "Ирина",
+        "Who is this": "Instructor"
+    },
+    {
+        "id": 14,
+        "FirstName": "Лидия",
+        "Who is this": "Visiter"
+    },
+    {
+        "id": 13,
+        "FirstName": "Максим",
+        "Who is this": "Visiter"
+    },
+    {
+        "id": 5,
+        "FirstName": "Максим",
+        "Who is this": "Visiter"
+    },
+    {
+        "id": 15,
+        "FirstName": "Николай",
+        "Who is this": "Visiter"
+    },
+    {
+        "id": 21,
+        "FirstName": "Николай",
+        "Who is this": "Visiter"
+    },
+    {
+        "id": 6,
+        "FirstName": "Олег",
+        "Who is this": "Visiter"
+    },
+    {
+        "id": 7,
+        "FirstName": "Ольга",
+        "Who is this": "Visiter"
+    },
+    {
+        "id": 8,
+        "FirstName": "Ольга ",
+        "Who is this": "Visiter"
+    },
+    {
+        "id": 24,
+        "FirstName": "Петр",
+        "Who is this": "Visiter"
+    },
+    {
+        "id": 1,
+        "FirstName": "Пётр",
+        "Who is this": "Instructor"
+    },
+    {
+        "id": 7,
+        "FirstName": "Пётр",
+        "Who is this": "Instructor"
+    },
+    {
+        "id": 10,
+        "FirstName": "Себестьян",
+        "Who is this": "Visiter"
+    },
+    {
+        "id": 16,
+        "FirstName": "Сергей",
+        "Who is this": "Visiter"
+    },
+    {
+        "id": 18,
+        "FirstName": "Тамара",
+        "Who is this": "Visiter"
+    },
+    {
+        "id": 9,
+        "FirstName": "Тамара",
+        "Who is this": "Instructor"
+    },
+    {
+        "id": 2,
+        "FirstName": "Фёдор",
+        "Who is this": "Instructor"
+    },
+    {
+        "id": 11,
+        "FirstName": "Фриман",
+        "Who is this": "Instructor"
+    },
+    {
+        "id": 6,
+        "FirstName": "Эльдар",
+        "Who is this": "Instructor"
+    }
+][
+    {
+        "FullName": "Галустян Фёдор",
+        "Phone": "+222-32-67"
+    },
+    {
+        "FullName": "Иванов Денис",
+        "Phone": "+222-54-77"
+    },
+    {
+        "FullName": "Крутиков Эльдар",
+        "Phone": "+222-46-46"
+    }
+][
+    {
+        "FirstName": "Борис",
+        "LastName": "Абрамович",
+        "LastVisit": [
+    {
+        "LastName": "Боброва",
+        "FirstName": "Ирина",
+        "SectionName": "Аэробика"
+    },
+    {
+        "LastName": "Жозина",
+        "FirstName": "Тамара",
+        "SectionName": "Аэробика"
+    },
+    {
+        "LastName": "Ялдышева",
+        "FirstName": "Ирина",
+        "SectionName": "Шейпинг"
+    },
+    {
+        "LastName": "Захаров ",
+        "FirstName": "Пётр",
+        "SectionName": "Шейпинг"
+    },
+    {
+        "LastName": "Иванов",
+        "FirstName": "Пётр",
+        "SectionName": "Кроссфит"
+    },
+    {
+        "LastName": "Галустян",
+        "FirstName": "Фёдор",
+        "SectionName": "Пилатес"
+    },
+    {
+        "LastName": "Иванов",
+        "FirstName": "Денис",
+        "SectionName": "Бодифлекс"
+    },
+    {
+        "LastName": "Крутиков",
+        "FirstName": "Эльдар",
+        "SectionName": "Бодифлекс"
+    },
+    {
+        "LastName": "Челнаков ",
+        "FirstName": "Амир",
+        "SectionName": "Йога"
+    },
+    {
+        "LastName": "Борисов",
+        "FirstName": "Александр",
+        "SectionName": "Йога"
+    },
+    {
+        "LastName": null,
+        "FirstName": null,
+        "SectionName": "Бокс"
+    }
+][
+    {
+        "LastName": "Иванов",
+        "FirstName": "Пётр",
+        "SectionName": "Кроссфит"
+    },
+    {
+        "LastName": "Галустян",
+        "FirstName": "Фёдор",
+        "SectionName": "Пилатес"
+    },
+    {
+        "LastName": "Боброва",
+        "FirstName": "Ирина",
+        "SectionName": "Аэробика"
+    },
+    {
+        "LastName": "Иванов",
+        "FirstName": "Денис",
+        "SectionName": "Бодифлекс"
+    },
+    {
+        "LastName": "Ялдышева",
+        "FirstName": "Ирина",
+        "SectionName": "Шейпинг"
+    },
+    {
+        "LastName": "Крутиков",
+        "FirstName": "Эльдар",
+        "SectionName": "Бодифлекс"
+    },
+    {
+        "LastName": "Захаров ",
+        "FirstName": "Пётр",
+        "SectionName": "Шейпинг"
+    },
+    {
+        "LastName": "Челнаков ",
+        "FirstName": "Амир",
+        "SectionName": "Йога"
+    },
+    {
+        "LastName": "Жозина",
+        "FirstName": "Тамара",
+        "SectionName": "Аэробика"
+    },
+    {
+        "LastName": "Борисов",
+        "FirstName": "Александр",
+        "SectionName": "Йога"
+    },
+    {
+        "LastName": "Норман",
+        "FirstName": "Фриман",
+        "SectionName": null
+    },
+    {
+        "LastName": null,
+        "FirstName": null,
+        "SectionName": "Бокс"
+    }
+][
+    {
+        "LastName": "Боброва",
+        "FirstName": "Ирина",
+        "SectionName": "Аэробика"
+    },
+    {
+        "LastName": "Жозина",
+        "FirstName": "Тамара",
+        "SectionName": "Аэробика"
+    },
+    {
+        "LastName": "Иванов",
+        "FirstName": "Денис",
+        "SectionName": "Бодифлекс"
+    },
+    {
+        "LastName": "Крутиков",
+        "FirstName": "Эльдар",
+        "SectionName": "Бодифлекс"
+    },
+    {
+        "LastName": null,
+        "FirstName": null,
+        "SectionName": "Бокс"
+    },
+    {
+        "LastName": "Челнаков ",
+        "FirstName": "Амир",
+        "SectionName": "Йога"
+    },
+    {
+        "LastName": "Борисов",
+        "FirstName": "Александр",
+        "SectionName": "Йога"
+    },
+    {
+        "LastName": "Иванов",
+        "FirstName": "Пётр",
+        "SectionName": "Кроссфит"
+    },
+    {
+        "LastName": "Галустян",
+        "FirstName": "Фёдор",
+        "SectionName": "Пилатес"
+    },
+    {
+        "LastName": "Ялдышева",
+        "FirstName": "Ирина",
+        "SectionName": "Шейпинг"
+    },
+    {
+        "LastName": "Захаров ",
+        "FirstName": "Пётр",
+        "SectionName": "Шейпинг"
+    },
+    {
+        "LastName": "Борис",
+        "FirstName": "Абрамович",
+        "SectionName": "Аэробика"
+    },
+    {
+        "LastName": "Геннадий",
+        "FirstName": "Вертинский",
+        "SectionName": "Аэробика"
+    },
+    {
+        "LastName": "Иннокентий",
+        "FirstName": "Смактуновский",
+        "SectionName": "Аэробика"
+    },
+    {
+        "LastName": "Геннадий",
+        "FirstName": "Павлов",
+        "SectionName": "Шейпинг"
+    },
+    {
+        "LastName": "Максим",
+        "FirstName": "Каява",
+        "SectionName": "Шейпинг"
+    },
+    {
+        "LastName": "Олег",
+        "FirstName": "Боярышников",
+        "SectionName": "Шейпинг"
+    },
+    {
+        "LastName": "Ольга",
+        "FirstName": "Филатова",
+        "SectionName": "Кроссфит"
+    },
+    {
+        "LastName": "Ольга ",
+        "FirstName": "Тиханович",
+        "SectionName": "Кроссфит"
+    },
+    {
+        "LastName": "Ирина",
+        "FirstName": "Понарошку",
+        "SectionName": "Кроссфит"
+    },
+    {
+        "LastName": "Себестьян",
+        "FirstName": "Орейро",
+        "SectionName": "Пилатес"
+    },
+    {
+        "LastName": "Борис",
+        "FirstName": "Крыжовников",
+        "SectionName": "Пилатес"
+    },
+    {
+        "LastName": "Аристарх",
+        "FirstName": "Коклюшкин",
+        "SectionName": "Пилатес"
+    },
+    {
+        "LastName": "Максим",
+        "FirstName": "Желтухин",
+        "SectionName": "Бодифлекс"
+    },
+    {
+        "LastName": "Лидия",
+        "FirstName": "Небросько",
+        "SectionName": "Бодифлекс"
+    },
+    {
+        "LastName": "Николай",
+        "FirstName": "Зарубин",
+        "SectionName": "Бодифлекс"
+    },
+    {
+        "LastName": "Сергей",
+        "FirstName": "Крылов",
+        "SectionName": "Йога"
+    },
+    {
+        "LastName": "Алексей",
+        "FirstName": "Неклюдов",
+        "SectionName": "Йога"
+    },
+    {
+        "LastName": "Тамара",
+        "FirstName": "Меладзе",
+        "SectionName": "Йога"
+    },
+    {
+        "LastName": "Валентин ",
+        "FirstName": "Усташевич",
+        "SectionName": "Аэробика"
+    },
+    {
+        "LastName": "Аристарх",
+        "FirstName": "Борисов",
+        "SectionName": "Шейпинг"
+    }
+]
